@@ -1,1 +1,10 @@
 @use '../abstracts/' as *;
+
+.button {
+    display: inline-block;
+    font-size: 1.5rem !important;
+    padding: .6em 1em;
+    background-color: $black;
+    color: $white !important;
+    font-weight: 700;
+}

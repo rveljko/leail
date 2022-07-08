@@ -1,1 +1,60 @@
 @use '../abstracts/' as *;
+
+.navigation {
+    background-color: $background-color;
+    width: 100%;
+
+    &__content {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        font-size: 0;
+    }
+
+    &__list {
+        display: none;
+        margin: 0;
+        padding: 0;
+
+        @include breakpoint(large) {
+            display: block;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+    
+    &__link {
+
+        &:hover {
+            color: $black;
+        }
+    }
+
+    &__menu {
+        cursor: pointer;
+
+        @include breakpoint(large) {
+            display: none;
+        }
+    }
+
+    &__lines {
+        display: block;
+        background-color: $black;
+        width: 2rem;
+        height: .1875rem;
+        border-radius: 100vmax;
+
+        &:not(:last-child) {
+            margin-bottom: .25rem;
+        }
+    }
+}
