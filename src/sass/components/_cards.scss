@@ -1,1 +1,19 @@
 @use '../abstracts/' as *;
+
+.card {
+    display: inline-block;
+    padding: 2rem;
+    background-color: transparent;
+    border: .25rem solid $white;
+    border-radius: .25em;
+    transition: 500ms;
+
+    &:hover {
+        background-color: $white;
+        transform: scale(1.025);
+    }
+
+    &__description {
+        max-width: 23.375rem;
+    }
+}

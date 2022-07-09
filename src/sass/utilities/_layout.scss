@@ -9,6 +9,17 @@
     @include breakpoint(large) {
         flex-direction: row;
         align-items: unset;
-        gap: unset;
+    }
+
+    &--reverse {
+        
+        @include breakpoint(large) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &--cards {
+        gap: .625rem;
+        flex-direction: column;
     }
 }
