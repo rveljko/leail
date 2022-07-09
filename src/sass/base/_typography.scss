@@ -5,6 +5,11 @@ h1, h2, h3, h4, h5, h6, p {
     margin-bottom: 0;
 }
 
+h1, h2, h3 {
+    margin-bottom: .625rem;
+    max-width: 33.125rem;
+}
+
 h1 {
     font-size: 2.625rem;
 
@@ -44,6 +49,7 @@ h5 {
 p {
     font-size: 1.125rem;
     color: $neutral;
+    max-width: 30rem;
 }
 
 a {

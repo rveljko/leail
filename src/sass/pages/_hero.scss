@@ -1,1 +1,15 @@
 @use '../abstracts/' as *;
+
+.hero {
+    background-color: $background-color;
+    width: 100%;
+    padding-top: 2.5rem;
+
+    &__description {
+        margin-bottom: 2rem;
+    }
+
+    &__image {
+        font-size: 0;
+    }
+}
