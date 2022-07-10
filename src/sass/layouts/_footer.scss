@@ -1,1 +1,57 @@
 @use '../abstracts/' as *;
+
+.footer {
+    background-color: $background-color;
+    width: 100%;
+
+    &__content {
+        flex-direction: column;
+        gap: 7.5rem;
+
+        @include breakpoint(large) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__logo {
+        font-size: 0;
+    }
+
+    &__description {
+        margin-top: .625em;
+    }
+
+    &__navigation {
+        flex-direction: column;
+        gap: 2.75rem;
+
+        @include breakpoint(large) {
+            flex-direction: row;
+            gap: 5.5rem;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+    }
+    
+    &__heading {
+        margin-bottom: 1.5rem;
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__link {
+
+        &:hover {
+            color: $black;
+        }
+    }
+}
