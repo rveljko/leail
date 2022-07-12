@@ -1,1 +1,58 @@
 @use '../abstracts/' as *;
+
+.faq {
+
+    &__container.activefaq &__question {
+        background-color: $white;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    &__container.activefaq &__arrow {
+        transform: rotate(180deg);
+    }
+
+    &__container.activefaq &__answer {
+        max-height: max-content;
+    }
+
+    &__question {
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+        padding: 2rem;
+        background-color: transparent;
+        border: .125rem solid $white;
+        border-radius: .25rem;
+        cursor: pointer;
+    }
+
+    &__icon {
+        font-size: 0;
+    }
+
+    &__arrow {
+        max-width: 1.5rem;
+        border-radius: 2em;
+
+        @include breakpoint(large) {
+            max-width: 1.75rem;
+        }
+    }
+
+    &__answer {
+        max-height: 0;
+        overflow: hidden;
+        background-color: $white;
+        border-bottom-left-radius: .25em;
+        border-bottom-right-radius: .25em;
+    }
+
+    &__description {
+        padding: 2rem;
+
+        &:not(:last-child) {
+            padding-bottom: 0;
+        }
+    }
+}

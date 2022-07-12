@@ -1,6 +1,8 @@
 const openMenu = document.getElementById('openMenu');
 const closeMenu = document.getElementById('closeMenu');
 const sideBar = document.getElementById('sideBar');
+const faqContainers = document.querySelectorAll('.faq__container');
+
 
 const closingMenu = () => {
     sideBar.classList.remove('open');
@@ -16,3 +18,8 @@ const openingMenu = () => {
 
 openMenu.addEventListener('click', openingMenu);
 closeMenu.addEventListener('click', closingMenu);
+faqContainers.forEach(faqContainer => {
+    faqContainer.addEventListener('click', () => {
+        faqContainer.classList.toggle('activefaq');
+    });
+});
